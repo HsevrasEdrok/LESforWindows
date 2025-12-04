@@ -8,15 +8,15 @@ No_UPX=1
 Created_Date=1
 [VERSION]
 Set_Version_Info=1
-Company_Name=Inverted Silence & Dylan Tallchief
+Company_Name=Inverted Silence & Dylan Tallchief (Forked by Hsevras Edrok)
 File_Description=Live Enhancement Suite
-File_Version=0.1.3.3
+File_Version=0.1.3.7
 Inc_File_Version=0
 Internal_Name=Live Enhancement Suite
-Legal_Copyright=© 2019
+Legal_Copyright=© 2025
 Original_Filename=Live Enhancement Suite
 Product_Name=Live Enhancement Suite
-Product_Version=0.1.3.2
+Product_Version=0.1.3.7
 [ICONS]
 Icon_1=%In_Dir%\resources\blueico.ico
 Icon_2=%In_Dir%\resources\blueico.ico
@@ -631,7 +631,6 @@ Critical
 Return
 
 hotkeysmain:
-#IfWinActive ahk_exe Ableton Live.+
 
 ;-----------------------------------;
 ;		  Hotkeys main		;
@@ -675,7 +674,7 @@ if (enableclosewindow = 1){
 Hotkey, ^w, closewindow
 Hotkey, ^!w, closeall
 }
-Hotkey, ^b, buplicate
+Hotkey, ^+b, buplicate
 
 Hotkey, ^+h, directshyper
 ;Hotkey, !g, debugshortcut
@@ -1178,8 +1177,10 @@ tempautoadd := autoadd
 
 
 If (tempautoadd = 1){
-sleep, 112
-Send,{down}{enter}
+sleep, 50 ;Ableton Live 12 fix
+Send,{down} 50 ;Ableton Live 12 fix
+sleep, 50
+Send,{enter}
 }
 Else{
 goto, skipautoadd
@@ -1577,7 +1578,7 @@ WinGetTitle, WinTitle, ahk_id %guideUnderCursor%
 if(InStr(WinTitle, "Ableton") != 0){
 	Click, Right
 	sleep, 20
-	SendInput {up 2}
+	SendInput {a}
 	SendInput {Enter}
 }
 Return
@@ -1700,7 +1701,7 @@ return
 ;Return
 
 buplicate: ;brought to you by dylan tallchief
-if (A_PriorHotkey != "^b" or A_TimeSincePriorHotkey > 1800 or A_PriorKey = Lbutton)
+if (A_PriorHotkey != "^+b" or A_TimeSincePriorHotkey > 1800 or A_PriorKey = Lbutton)
 {
     ; Too much time between presses, so this isn't a double-press.
 send {ctrl down}{d 7}{ctrl up}
