@@ -322,3 +322,28 @@ If you want to use InsertWhere on a Mac, please click [here](https://cdn.discord
 * Added shortcuts for Freezing (alt + F) and Flattening tracks (alt + shift + F) 
 * Small fix for Quick Marker on different live versions
 * Removed a tray flair thing that celebrates the 1.2 release since we're on 1.3 by now
+
+* ## Release 1.3.5
+
+* Emoji Support for menu items
+* You can now add emojis to menu items and category names
+* LES will ask you if you want to apply a UTF-8 support registry patch to support those characters whenever you try to use one
+* the action is reversible
+
+* Fixed Cleartracks
+* Feature should now work on linked tracks, live 11, live 10, and all regions
+
+* Fixed Freeze & Flatten shortcuts from 1.3.3
+* Feature should now work on all regions
+
+* Changed default configuration file
+* Piano roll detection for the scale menu is no longer enabled by default
+* Moved some items around for clarity
+
+## Release 1.3.6
+* Add Menu now works with Ableton Live 12
+* To avoid confusion due to similar name of inserts (Compressor, Glue Compressor, kHs Compressor) make sure your menu item name has a uniquie identifier. For that, you can save your inserts as a preset in Ableton Live like "MyGlueCompressor.adv" or "MykHsCompressor.vstpreset". Then add these preset names to your menu config.
+
+## Release 1.3.7
+* Buplicate is now Ctrl+Shift+B as Ctrl+B is and official shortcut for "Bounce to New Track"
+* Fixed Alt+C (Set Clip Colour)
