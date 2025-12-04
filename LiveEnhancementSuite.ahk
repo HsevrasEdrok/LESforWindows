@@ -1544,7 +1544,7 @@ WinMenuSelectItem,,, 3&, 13&
 Else if !(InStr(wintitleoutput, "Live 10", CaseSensitive := false) = 0){
 WinMenuSelectItem,,, 3&, 14&
 }
-Else if !(InStr(wintitleoutput, "Live 11", CaseSensitive := false) = 0){
+Else if !(InStr(wintitleoutput, "Ableton Live", CaseSensitive := false) = 0){
 WinMenuSelectItem,,, 3&, 20&
 ; WinMenuSelectItem,,, 3&, 15& (this actually crashes live)
 }
@@ -1556,7 +1556,7 @@ return
 return
 
 freezetrack:
-if !(InStr(wintitleoutput, "Live 11", CaseSensitive := false) = 0){
+if !(InStr(wintitleoutput, "Ableton Live", CaseSensitive := false) = 0){
 	WinmenuSelectItem,,, 2&, 28&
 }
 else {
@@ -1564,7 +1564,7 @@ else {
 }
 return
 flattentrack:
-if !(InStr(wintitleoutput, "Live 11", CaseSensitive := false) = 0){
+if !(InStr(wintitleoutput, "Ableton Live", CaseSensitive := false) = 0){
 	WinmenuSelectItem,,, 2&, 29&
 }
 else {
@@ -1586,7 +1586,7 @@ Return
 cleartracks:
 MouseGetPos,,,guideUnderCursor
 WinGetTitle, WinTitle, ahk_id %guideUnderCursor%
-if(InStr(WinTitle, "Ableton Live 11") != 0){
+if(InStr(WinTitle, "Ableton Live") != 0){
 	Click, Right
 	sleep, 20
 	SendInput {down 12}
