@@ -323,7 +323,7 @@ If you want to use InsertWhere on a Mac, please click [here](https://cdn.discord
 * Small fix for Quick Marker on different live versions
 * Removed a tray flair thing that celebrates the 1.2 release since we're on 1.3 by now
 
-* ## Release 1.3.5
+## Release 1.3.5
 
 * Emoji Support for menu items
 * You can now add emojis to menu items and category names
